@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  RSSReader
+
+  Created by Vitaly Batrakov on 07.10.17.
+  Copyright © 2017 vbat. All rights reserved.
+*/
+
+"kLoadingErrorTitle" = "Ошибка";
+
+"kFeedListTitle" = "Новости";
+"kSourcesListTitle" = "Каналы";
+
+"kVisitWebsiteButtonTitle" = "Читать дальше";
+
+"kAddSourceTitle" = "Новый канал";
+"kAddSourceMessage" = "Введите адрес канала";
+"kAddSourceAdd" = "Добавить";
+"kAddSourceCancel" = "Отмена";
+"kAddSourceError" = "Ошибка";
+"kAddSourceErrorMessage" = "Некорректный URL";
+
+"kUpdateFeedsTitle" = "Загрузка";

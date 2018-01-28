@@ -1,0 +1,17 @@
+PODS:
+  - FastEasyMapping (1.2.1)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+
+DEPENDENCIES:
+  - FastEasyMapping (~> 1.2)
+  - SDWebImage (~> 4.0)
+
+SPEC CHECKSUMS:
+  FastEasyMapping: 4dd3a783f80063ed04d9bbc568115ec90490996c
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+
+PODFILE CHECKSUM: 3d6e48d226960362186755da5e980f8f7b5189a0
+
+COCOAPODS: 1.2.1

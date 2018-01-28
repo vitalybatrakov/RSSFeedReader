@@ -1,0 +1,5 @@
+target ‘RSSReader’ do
+	platform :ios, ‘8.0’
+	pod 'SDWebImage', '~> 4.0'
+	pod 'FastEasyMapping’, '~> 1.2'
+end
