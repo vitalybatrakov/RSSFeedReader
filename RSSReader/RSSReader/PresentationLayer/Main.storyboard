@@ -48,13 +48,13 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nO-os-jhX">
-                                                    <rect key="frame" x="79" y="40" width="276" height="34"/>
+                                                    <rect key="frame" x="79" y="39.5" width="276" height="34.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-fZ-0ZQ">
-                                                    <rect key="frame" x="79" y="5" width="291" height="35"/>
+                                                    <rect key="frame" x="79" y="5" width="291" height="34.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -78,6 +78,34 @@
                                             <outlet property="image" destination="f2J-2n-0hj" id="yMf-WN-Pca"/>
                                             <outlet property="titleLabel" destination="ig2-fZ-0ZQ" id="fu2-6X-kRd"/>
                                             <segue destination="1bT-rE-9C5" kind="show" identifier="DetailSegue" id="lOG-i1-r2O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedErrorTableViewCell" rowHeight="35" id="PAm-a6-c0Y" customClass="FeedErrorTableViewCell">
+                                        <rect key="frame" x="0.0" y="113" width="375" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAm-a6-c0Y" id="C8k-gq-gRt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="34.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorMessage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIk-4V-EpK">
+                                                    <rect key="frame" x="15" y="11" width="345" height="13"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="locKey" value="kErrorMessage"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OIk-4V-EpK" secondAttribute="trailing" id="4qj-x2-FUV"/>
+                                                <constraint firstItem="OIk-4V-EpK" firstAttribute="bottom" secondItem="C8k-gq-gRt" secondAttribute="bottomMargin" id="BEf-g8-dVT"/>
+                                                <constraint firstItem="OIk-4V-EpK" firstAttribute="leading" secondItem="C8k-gq-gRt" secondAttribute="leadingMargin" id="qID-U1-8YE"/>
+                                                <constraint firstItem="OIk-4V-EpK" firstAttribute="top" secondItem="C8k-gq-gRt" secondAttribute="topMargin" id="uJK-Xk-GlF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="OIk-4V-EpK" id="aKt-b2-cZy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

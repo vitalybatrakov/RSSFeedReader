@@ -21,3 +21,4 @@
 "kAddSourceErrorMessage" = "Invalid URL";
 
 "kUpdateFeedsTitle" = "Updating feeds";
+"kErrorMessage" = "Fail on loading feed";
