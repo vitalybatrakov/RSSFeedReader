@@ -10,8 +10,10 @@
 #import "FeedSource.h"
 
 static NSString * const kFeedSourceId = @"FeedSources";
-static NSString * const DefaultSourceTitleId = @"Habrahabr";
-static NSString * const DefaultSourceLinkId =  @"https://habrahabr.ru/rss/interesting/";
+static NSString * const HabrSourceTitleId = @"Habrahabr";
+static NSString * const HabrSourceLinkId =  @"https://habrahabr.ru/rss/interesting/";
+static NSString * const TechCrunchSourceTitleId = @"TechCrunch";
+static NSString * const TechCrunchSourceLinkId =  @"https://techcrunch.com/feed/";
 
 @implementation SourceStorageImpl
 
@@ -21,9 +23,11 @@ static NSString * const DefaultSourceLinkId =  @"https://habrahabr.ru/rss/intere
     NSArray<FeedSource *> *sources = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
     
     if (sources == nil) {
-        FeedSource *feedSource = [[FeedSource alloc] initWithTitle:DefaultSourceTitleId
-                                                         urlString:DefaultSourceLinkId];
-        sources = @[feedSource];
+        FeedSource *habrSource = [[FeedSource alloc] initWithTitle:HabrSourceTitleId
+                                                         urlString:HabrSourceLinkId];
+        FeedSource *techCrunchSource = [[FeedSource alloc] initWithTitle:TechCrunchSourceTitleId
+                                                         urlString:TechCrunchSourceTitleId];
+        sources = @[habrSource, techCrunchSource];
     }
     
     return sources;

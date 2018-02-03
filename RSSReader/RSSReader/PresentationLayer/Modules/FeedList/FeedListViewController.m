@@ -80,8 +80,8 @@ static NSString * const FeedCellId = @"FeedListTableViewCell";
         cell.detailLabel.text = feed.feedDescription;
     };
     _dataSource = [[BaseTableViewDataSource alloc] initWithItems:sections
-                                                      cellIdentifier:FeedCellId
-                                                  configureCellBlock:configureCell];
+                                                  cellIdentifier:FeedCellId
+                                              configureCellBlock:configureCell];
     _tableView.dataSource = _dataSource;
 }
 

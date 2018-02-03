@@ -36,7 +36,6 @@
 
 - (void)fetchFeedsWithSources:(NSArray<FeedSource *> *)sources
                           completion:(FeedCompletionBlock)completionBlock {
-    
     dispatch_group_t serviceGroup = dispatch_group_create();
     NSMutableArray *feeds = [[NSMutableArray alloc] init];
     
@@ -50,8 +49,6 @@
                                   if (data != nil && error == nil) {
                                       NSDictionary *xmlDoc = [_rssParser parseData:data];
                                       [self mapFeedTo:feeds fromDictionary:xmlDoc];
-                                  } else {
-                                      completionBlock(nil, error);
                                   }
                                   dispatch_group_leave(serviceGroup);
                               }];
@@ -62,13 +59,17 @@
 }
 
 - (void)getSourceTitleWithURL:(NSURL *)url completion:(SourceCompletionBlock)completionBlock {
-    
     [_networkService loadDataWithURL:url
                           completion:^(NSData *data, NSError *error) {
                               if (data != nil && error == nil) {
                                   NSDictionary *xmlDoc = [_rssParser parseData:data];
                                   NSString *title = [self getSourceTitleFromDictionary:xmlDoc];
-                                  completionBlock(title, nil);
+                                  if (title != nil) {
+                                      completionBlock(title, nil);
+                                  } else {
+                                      NSError * error = [self createErrorWithDescription:NSLocalizedString(@"kErrorMessage", nil)];
+                                      completionBlock(nil, error);
+                                  }
                               } else {
                                   completionBlock(nil, error);
                               }
@@ -79,16 +80,27 @@
 
 - (void)mapFeedTo:(NSMutableArray *)feeds fromDictionary:(NSDictionary *)dictionary {
     NSDictionary * feedDic = dictionary[@"channel"];
-    FEMMapping *mapping = [Feed defaultMapping];
-    Feed *feed = [FEMDeserializer objectFromRepresentation:feedDic mapping:mapping];
-    [feed setupFeedImageAndDescription];
-    [feeds addObject:feed];
+    if (feedDic != nil) {
+        FEMMapping *mapping = [Feed defaultMapping];
+        Feed *feed = [FEMDeserializer objectFromRepresentation:feedDic mapping:mapping];
+        [feed setupFeedImageAndDescription];
+        [feeds addObject:feed];
+    }
 }
 
 - (NSString *)getSourceTitleFromDictionary:(NSDictionary *)dictionary {
     NSDictionary * channelDic = dictionary[@"channel"];
     NSString *title = channelDic[@"title"];
     return title;
+}
+
+- (NSError *)createErrorWithDescription:(NSString *)description {
+    NSString *domain = @"com.vbat.RSSReader.ErrorDomain";
+    NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : description };
+    NSError *error = [NSError errorWithDomain:domain
+                                         code:-101
+                                     userInfo:userInfo];
+    return error;
 }
 
 @end

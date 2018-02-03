@@ -21,3 +21,4 @@
 "kAddSourceErrorMessage" = "Некорректный URL";
 
 "kUpdateFeedsTitle" = "Загрузка";
+"kErrorMessage" = "Не удалось подключиться к каналу";

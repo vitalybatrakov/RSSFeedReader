@@ -12,7 +12,6 @@
 		BC333DD51F89262300A0AA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC333DD41F89262300A0AA2B /* Assets.xcassets */; };
 		BC333DDB1F89262300A0AA2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC333DDA1F89262300A0AA2B /* main.m */; };
 		BC333DE81F892CF100A0AA2B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC333DEA1F892CF100A0AA2B /* Localizable.strings */; };
-		BC5CFC5A2025E0C000DF5EE0 /* FeedErrorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5CFC592025E0C000DF5EE0 /* FeedErrorTableViewCell.m */; };
 		BCB2E32D1F89544700748067 /* FeedListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2E32C1F89544700748067 /* FeedListTableViewCell.m */; };
 		BCB2E3311F93A86C00748067 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2E3301F93A86C00748067 /* UIViewController+Alert.m */; };
 		BCEC3A9C1F893031008AA75E /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC3A961F893030008AA75E /* Feed.m */; };
@@ -49,8 +48,6 @@
 		BC333DDA1F89262300A0AA2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC333DE91F892CF100A0AA2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BC333DEB1F892D0A00A0AA2B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BC5CFC582025E0C000DF5EE0 /* FeedErrorTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedErrorTableViewCell.h; sourceTree = "<group>"; };
-		BC5CFC592025E0C000DF5EE0 /* FeedErrorTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedErrorTableViewCell.m; sourceTree = "<group>"; };
 		BCB2E32B1F89544700748067 /* FeedListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedListTableViewCell.h; sourceTree = "<group>"; };
 		BCB2E32C1F89544700748067 /* FeedListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedListTableViewCell.m; sourceTree = "<group>"; };
 		BCB2E32F1F93A86C00748067 /* UIViewController+Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
@@ -234,8 +231,6 @@
 			children = (
 				BCB2E32B1F89544700748067 /* FeedListTableViewCell.h */,
 				BCB2E32C1F89544700748067 /* FeedListTableViewCell.m */,
-				BC5CFC582025E0C000DF5EE0 /* FeedErrorTableViewCell.h */,
-				BC5CFC592025E0C000DF5EE0 /* FeedErrorTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -533,7 +528,6 @@
 				BCEC3ACC1F893C54008AA75E /* Section.m in Sources */,
 				BCEC3A9D1F893031008AA75E /* FeedSource.m in Sources */,
 				BCEC3AE61F893F51008AA75E /* WebPageViewController.m in Sources */,
-				BC5CFC5A2025E0C000DF5EE0 /* FeedErrorTableViewCell.m in Sources */,
 				BC333DDB1F89262300A0AA2B /* main.m in Sources */,
 				BCB2E32D1F89544700748067 /* FeedListTableViewCell.m in Sources */,
 				BCEC3AE01F893F0E008AA75E /* FeedDetailsViewController.m in Sources */,
