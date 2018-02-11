@@ -4,6 +4,8 @@ The simple app that fetches and displays RSS feeds.
 
 App is written in Objective-C.
 
+SDWebImage and FastEasyMapping are used.
+
 ## <a name="description"/> UI Description
 
 - User can add/remove/modify RSS feed sources.
@@ -15,3 +17,6 @@ App is written in Objective-C.
 
 - iOS 8.0+
 - Xcode 9.0+
+
+## <a name="licence"/> Licence
+MIT
