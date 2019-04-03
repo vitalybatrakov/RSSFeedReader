@@ -10,9 +10,10 @@
 
 @interface FeedSource : NSObject
 
-@property (nonatomic, copy, readonly) NSString *title;
-@property (nonatomic, copy, readonly) NSString *link;
+@property (nonatomic, copy, readonly) NSString * _Nonnull title;
+@property (nonatomic, copy, readonly) NSString * _Nonnull link;
 
-- (instancetype)initWithTitle:(NSString *)title urlString:(NSString *)link;
+- (instancetype)initWithTitle:(NSString * _Nonnull)title
+                    urlString:(NSString * _Nonnull)link;
 
 @end

@@ -24,6 +24,8 @@
 
 @implementation FeedServiceImpl
 
+#pragma mark - Initializers
+
 - (instancetype)initWithNetwork:(id<NetworkService>)networkService
                       rssParser:(id<XMLParser>)rssParser {
     self = [super init];
@@ -34,8 +36,10 @@
     return self;
 }
 
-- (void)fetchFeedsWithSources:(NSArray<FeedSource *> *)sources
-                          completion:(FeedCompletionBlock)completionBlock {
+#pragma mark - FeedService protocol
+
+- (void)fetchFeedsWithSources:(NSArray<FeedSource *> * _Nonnull)sources
+                   completion:(FeedCompletionBlock)completionBlock {
     dispatch_group_t serviceGroup = dispatch_group_create();
     NSMutableArray *feeds = [[NSMutableArray alloc] init];
     
@@ -58,7 +62,8 @@
     });
 }
 
-- (void)getSourceTitleWithURL:(NSURL *)url completion:(SourceCompletionBlock)completionBlock {
+- (void)getSourceTitleWithURL:(NSURL * _Nonnull)url
+                   completion:(SourceCompletionBlock)completionBlock {
     [_networkService loadDataWithURL:url
                           completion:^(NSData *data, NSError *error) {
                               if (data != nil && error == nil) {
@@ -78,23 +83,24 @@
 
 #pragma mark - Private methods
 
-- (void)mapFeedTo:(NSMutableArray *)feeds fromDictionary:(NSDictionary *)dictionary {
+- (void)mapFeedTo:(NSMutableArray * _Nonnull)feeds fromDictionary:(NSDictionary * _Nonnull)dictionary {
     NSDictionary * feedDic = dictionary[@"channel"];
     if (feedDic != nil) {
         FEMMapping *mapping = [Feed defaultMapping];
-        Feed *feed = [FEMDeserializer objectFromRepresentation:feedDic mapping:mapping];
+        Feed *feed = [FEMDeserializer objectFromRepresentation:feedDic
+                                                       mapping:mapping];
         [feed setupFeedImageAndDescription];
         [feeds addObject:feed];
     }
 }
 
-- (NSString *)getSourceTitleFromDictionary:(NSDictionary *)dictionary {
+- (NSString * _Nonnull)getSourceTitleFromDictionary:(NSDictionary * _Nonnull)dictionary {
     NSDictionary * channelDic = dictionary[@"channel"];
     NSString *title = channelDic[@"title"];
     return title;
 }
 
-- (NSError *)createErrorWithDescription:(NSString *)description {
+- (NSError * _Nonnull)createErrorWithDescription:(NSString * _Nonnull)description {
     NSString *domain = @"com.vbat.RSSReader.ErrorDomain";
     NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : description };
     NSError *error = [NSError errorWithDomain:domain

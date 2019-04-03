@@ -17,7 +17,9 @@
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(<img\\s[\\s\\S]*?src\\s*?=\\s*?['\"](.*?)['\"][\\s\\S]*?>)+?"
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
-    NSTextCheckingResult *result = [regex firstMatchInString:_feedDescription options:0 range:NSMakeRange(0, [_feedDescription length])];
+    NSTextCheckingResult *result = [regex firstMatchInString:_feedDescription
+                                                     options:0
+                                                       range:NSMakeRange(0, [_feedDescription length])];
     NSString *imageString = [_feedDescription substringWithRange:[result rangeAtIndex:2]];
     self.imageURL = imageString;
 }
@@ -30,7 +32,7 @@
 
 @implementation FeedItem (Mapping)
 
-+ (FEMMapping *)defaultMapping {
++ (FEMMapping * _Nonnull)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:[self class]];
 
     [mapping addAttributesFromArray:@[@"title", @"link"]];

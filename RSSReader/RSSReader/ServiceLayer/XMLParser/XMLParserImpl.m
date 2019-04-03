@@ -11,7 +11,7 @@
 
 @implementation XMLParserImpl
 
-- (NSDictionary *)parseData:(NSData *)data {
+- (NSDictionary * _Nonnull)parseData:(NSData * _Nonnull)data {
     NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLData:data];
     return xmlDoc;
 }

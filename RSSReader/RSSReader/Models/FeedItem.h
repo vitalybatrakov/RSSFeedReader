@@ -12,10 +12,10 @@
 
 @interface FeedItem : NSObject
 
-@property (nonatomic, copy, readonly) NSString *title;
-@property (nonatomic, copy, readonly) NSString *link;
-@property (nonatomic, copy, readwrite) NSString *feedDescription;
-@property (nonatomic, copy, readwrite) NSString *imageURL;
+@property (nonatomic, copy, readonly) NSString * _Nonnull title;
+@property (nonatomic, copy, readonly) NSString * _Nonnull link;
+@property (nonatomic, copy, readwrite) NSString * _Nonnull feedDescription;
+@property (nonatomic, copy, readwrite) NSString * _Nullable imageURL;
 
 - (void)setupImageUrlFromDescription;
 - (void)convertFeedDescriptionToPlainText;
@@ -24,6 +24,6 @@
 
 @interface FeedItem (Mapping)
 
-+ (FEMMapping *)defaultMapping;
++ (FEMMapping * _Nonnull)defaultMapping;
 
 @end

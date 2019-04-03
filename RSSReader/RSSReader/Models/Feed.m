@@ -24,12 +24,13 @@
 
 @implementation Feed (Mapping)
 
-+ (FEMMapping *)defaultMapping {
++ (FEMMapping * _Nonnull)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:[self class]];
     
     [mapping addAttributesFromArray:@[@"title"]];
-    [mapping addToManyRelationshipMapping:[FeedItem defaultMapping] forProperty:@"feedItems" keyPath:@"item"];
-    
+    [mapping addToManyRelationshipMapping:[FeedItem defaultMapping]
+                              forProperty:@"feedItems"
+                                  keyPath:@"item"];
     return mapping;
 }
 

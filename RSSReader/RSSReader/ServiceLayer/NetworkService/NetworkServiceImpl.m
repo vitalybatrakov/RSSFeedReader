@@ -10,7 +10,7 @@
 
 @implementation NetworkServiceImpl
 
-- (void)loadDataWithURL:(NSURL *)dataURL
+- (void)loadDataWithURL:(NSURL * _Nonnull)dataURL
              completion:(LoadDataCompletionBlock)completion {
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *downloadTask = [session dataTaskWithURL:dataURL

@@ -17,7 +17,7 @@ static NSString * const TechCrunchSourceLinkId =  @"https://techcrunch.com/feed/
 
 @implementation SourceStorageImpl
 
-- (NSArray<FeedSource *> *)getSources {
+- (NSArray<FeedSource *> * _Nonnull)getSources {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *encodedObject = [defaults objectForKey:kFeedSourceId];
     NSArray<FeedSource *> *sources = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
@@ -33,7 +33,7 @@ static NSString * const TechCrunchSourceLinkId =  @"https://techcrunch.com/feed/
     return sources;
 }
 
-- (void)addSource:(FeedSource *)source {
+- (void)addSource:(FeedSource * _Nonnull)source {
     NSMutableArray<FeedSource *> *sources = [[self getSources] mutableCopy];
     [sources addObject:source];
     
@@ -43,7 +43,7 @@ static NSString * const TechCrunchSourceLinkId =  @"https://techcrunch.com/feed/
     [defaults synchronize];
 }
 
-- (void)saveSources:(NSArray<FeedSource *> *)sources {
+- (void)saveSources:(NSArray<FeedSource *> * _Nonnull)sources {
     NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:sources];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:encodedObject forKey:kFeedSourceId];

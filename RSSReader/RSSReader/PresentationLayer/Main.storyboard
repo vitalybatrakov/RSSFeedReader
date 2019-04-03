@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QKX-13-xE8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QKX-13-xE8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -147,12 +147,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="j2E-lc-4n8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8G1-w7-UmW" secondAttribute="bottom" constant="30" id="2Nd-bm-oWx"/>
                             <constraint firstItem="R6G-K7-nyU" firstAttribute="trailing" secondItem="Y7e-lf-B5z" secondAttribute="trailingMargin" id="AAa-Im-aDV"/>
                             <constraint firstItem="8G1-w7-UmW" firstAttribute="top" secondItem="1m3-pY-Wsu" secondAttribute="bottom" constant="22" id="Fys-Zw-QxR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8G1-w7-UmW" secondAttribute="trailing" constant="90" id="JeE-bJ-Dbm"/>
+                            <constraint firstItem="j2E-lc-4n8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8G1-w7-UmW" secondAttribute="bottom" constant="30" id="PhJ-ad-Kkj"/>
                             <constraint firstItem="1m3-pY-Wsu" firstAttribute="height" secondItem="bbQ-fk-zRu" secondAttribute="height" id="XiM-8E-RTH"/>
-                            <constraint firstItem="bbQ-fk-zRu" firstAttribute="top" secondItem="CLT-nT-Pmu" secondAttribute="bottom" constant="8" id="Z00-Px-WAv"/>
                             <constraint firstItem="bbQ-fk-zRu" firstAttribute="trailing" secondItem="Y7e-lf-B5z" secondAttribute="trailingMargin" id="ZJk-OA-uCH"/>
                             <constraint firstItem="1m3-pY-Wsu" firstAttribute="leading" secondItem="Y7e-lf-B5z" secondAttribute="leadingMargin" id="bXC-ch-8S5"/>
                             <constraint firstItem="1m3-pY-Wsu" firstAttribute="trailing" secondItem="Y7e-lf-B5z" secondAttribute="trailingMargin" id="crT-MW-xHC"/>
@@ -160,6 +159,7 @@
                             <constraint firstItem="R6G-K7-nyU" firstAttribute="leading" secondItem="Y7e-lf-B5z" secondAttribute="leadingMargin" id="gGD-Ha-5fU"/>
                             <constraint firstItem="1m3-pY-Wsu" firstAttribute="top" secondItem="R6G-K7-nyU" secondAttribute="bottom" constant="8" id="hkU-Nk-asz"/>
                             <constraint firstItem="R6G-K7-nyU" firstAttribute="top" secondItem="bbQ-fk-zRu" secondAttribute="bottom" constant="8" id="niR-3z-AKX"/>
+                            <constraint firstItem="bbQ-fk-zRu" firstAttribute="top" secondItem="CLT-nT-Pmu" secondAttribute="bottom" constant="8" id="oav-fJ-A7f"/>
                             <constraint firstItem="8G1-w7-UmW" firstAttribute="leading" secondItem="Y7e-lf-B5z" secondAttribute="leadingMargin" constant="71" id="qok-zM-x66"/>
                         </constraints>
                     </view>

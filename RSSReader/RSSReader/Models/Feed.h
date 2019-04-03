@@ -13,8 +13,8 @@
 
 @interface Feed : NSObject
 
-@property (nonatomic, copy, readonly) NSString *title;
-@property (nonatomic, strong, readonly) NSArray<FeedItem *> *feedItems;
+@property (nonatomic, copy, readonly) NSString * _Nonnull title;
+@property (nonatomic, strong, readonly) NSArray<FeedItem *> * _Nonnull feedItems;
 
 - (void)setupFeedImageAndDescription;
 
@@ -22,6 +22,6 @@
 
 @interface Feed (Mapping)
 
-+ (FEMMapping *)defaultMapping;
++ (FEMMapping * _Nonnull)defaultMapping;
 
 @end

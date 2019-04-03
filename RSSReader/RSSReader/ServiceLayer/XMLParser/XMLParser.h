@@ -8,6 +8,6 @@
 
 @protocol XMLParser <NSObject>
 
-- (NSDictionary *)parseData:(NSData *)data;
+- (NSDictionary * _Nonnull)parseData:(NSData * _Nonnull)data;
 
 @end

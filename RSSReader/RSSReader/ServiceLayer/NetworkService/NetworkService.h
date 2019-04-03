@@ -6,11 +6,11 @@
 //  Copyright © 2017 vbat. All rights reserved.
 //
 
-typedef void (^LoadDataCompletionBlock)(NSData* data, NSError *error);
+typedef void (^LoadDataCompletionBlock)(NSData* _Nullable data, NSError * _Nullable error);
 
 @protocol NetworkService <NSObject>
 
-- (void)loadDataWithURL:(NSURL *)dataURL
+- (void)loadDataWithURL:(NSURL * _Nonnull)dataURL
              completion:(LoadDataCompletionBlock)completion;
 
 @end

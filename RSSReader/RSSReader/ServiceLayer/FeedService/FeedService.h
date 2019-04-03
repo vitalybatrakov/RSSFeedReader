@@ -9,12 +9,14 @@
 @class Feed;
 @class FeedSource;
 
-typedef void (^FeedCompletionBlock)(NSArray<Feed *> *feeds, NSError *error);
-typedef void (^SourceCompletionBlock)(NSString *title, NSError *error);
+typedef void (^FeedCompletionBlock)(NSArray<Feed *> * _Nullable feeds, NSError * _Nullable error);
+typedef void (^SourceCompletionBlock)(NSString * _Nullable title, NSError * _Nullable error);
 
 @protocol FeedService <NSObject>
 
-- (void)fetchFeedsWithSources:(NSArray<FeedSource *> *)sources completion:(FeedCompletionBlock)completionBlock;
-- (void)getSourceTitleWithURL:(NSURL *)url completion:(SourceCompletionBlock)completionBlock;
+- (void)fetchFeedsWithSources:(NSArray<FeedSource *> * _Nonnull)sources
+                   completion:(FeedCompletionBlock)completionBlock;
+- (void)getSourceTitleWithURL:(NSURL * _Nonnull)url
+                   completion:(SourceCompletionBlock)completionBlock;
 
 @end

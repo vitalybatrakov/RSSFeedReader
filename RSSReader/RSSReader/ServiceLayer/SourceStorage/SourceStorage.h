@@ -10,8 +10,8 @@
 
 @protocol SourceStorage <NSObject>
 
-- (NSArray<FeedSource *> *)getSources;
-- (void)addSource:(FeedSource *)source;
-- (void)saveSources:(NSArray<FeedSource *> *)sources;
+- (NSArray<FeedSource *> * _Nonnull)getSources;
+- (void)addSource:(FeedSource * _Nonnull)source;
+- (void)saveSources:(NSArray<FeedSource *> * _Nonnull)sources;
 
 @end
