@@ -12,6 +12,6 @@
 
 @interface FeedDetailViewController : UIViewController
 
-@property (nonatomic, strong) FeedItem *feedItem;
+@property (nonatomic, strong) FeedItem * _Nonnull feedItem;
 
 @end

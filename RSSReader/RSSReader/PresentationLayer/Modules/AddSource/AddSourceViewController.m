@@ -14,8 +14,8 @@
 
 @interface AddSourceViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextField *sourceTextField;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progressIndicator;
+@property (strong, nonatomic) IBOutlet UITextField * _Nonnull sourceTextField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView * _Nullable progressIndicator;
 
 @end
 

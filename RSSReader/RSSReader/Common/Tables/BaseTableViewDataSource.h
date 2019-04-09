@@ -14,12 +14,12 @@ typedef void (^SectionsChangeBlock)(id sections);
 
 @interface BaseTableViewDataSource: NSObject <UITableViewDataSource>
 
-- (id)initWithItems:(NSArray *)sections
-     cellIdentifier:(NSString *)cellIdentifier
+- (id)initWithItems:(NSArray * _Nonnull)sections
+     cellIdentifier:(NSString * _Nonnull)cellIdentifier
  configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
 
-- (id)initWithItems:(NSArray *)sections
-     cellIdentifier:(NSString *)cellIdentifier
+- (id)initWithItems:(NSArray * _Nonnull)sections
+     cellIdentifier:(NSString * _Nonnull)cellIdentifier
  configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock
 changeSectionsBlock:(SectionsChangeBlock)changeSectionsBlock;
 

@@ -10,6 +10,6 @@
 
 @interface WebPageViewController : UIViewController
 
-@property (nonatomic, copy) NSString *pageURLString;
+@property (nonatomic, copy) NSString * _Nonnull pageURLString;
 
 @end

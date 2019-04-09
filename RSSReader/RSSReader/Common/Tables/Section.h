@@ -10,10 +10,10 @@
 
 @interface Section : NSObject
 
-@property (nonatomic, copy, readonly) NSString *title;
-@property (nonatomic, strong, readonly) NSMutableArray *items;
+@property (nonatomic, copy, readonly) NSString * _Nonnull title;
+@property (nonatomic, strong, readonly) NSMutableArray * _Nonnull items;
 
-- (id)initWithItems:(NSArray *)items
-              title:(NSString *)title;
+- (id)initWithItems:(NSArray * _Nonnull)items
+              title:(NSString * _Nonnull)title;
 
 @end

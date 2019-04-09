@@ -13,9 +13,9 @@
 
 @interface FeedDetailViewController ()
 
-@property (strong, nonatomic) IBOutlet UILabel *feedTitle;
-@property (strong, nonatomic) IBOutlet UIImageView *feedImage;
-@property (strong, nonatomic) IBOutlet UILabel *summary;
+@property (strong, nonatomic) IBOutlet UILabel * _Nonnull feedTitle;
+@property (strong, nonatomic) IBOutlet UIImageView * _Nonnull feedImage;
+@property (strong, nonatomic) IBOutlet UILabel * _Nonnull summary;
 
 @end
 

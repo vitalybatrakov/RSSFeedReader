@@ -19,9 +19,9 @@ static NSString * const SourceCellIdentifier = @"SourceTableViewCell";
 
 @interface SourceViewController ()
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) BaseTableViewDataSource *dataSource;
-@property (nonatomic, strong) BaseTableViewDelegate *delegate;
+@property (strong, nonatomic) IBOutlet UITableView * _Nonnull tableView;
+@property (nonatomic, strong) BaseTableViewDataSource * _Nonnull dataSource;
+@property (nonatomic, strong) BaseTableViewDelegate * _Nonnull delegate;
 
 @end
 

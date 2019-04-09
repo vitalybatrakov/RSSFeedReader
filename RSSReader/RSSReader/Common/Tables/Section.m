@@ -10,8 +10,8 @@
 
 @implementation Section
 
-- (id)initWithItems:(NSArray *)items
-              title:(NSString *)title {
+- (id)initWithItems:(NSArray * _Nonnull)items
+              title:(NSString * _Nonnull)title {
     self = [super init];
     if (self) {
         _items = [items mutableCopy];

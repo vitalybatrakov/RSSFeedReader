@@ -26,9 +26,9 @@ static NSString * const FeedCellId = @"FeedListTableViewCell";
 @interface FeedListViewController ()
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) UIRefreshControl *refreshControl;
-@property (nonatomic, strong) BaseTableViewDataSource *dataSource;
-@property (nonatomic, strong) BaseTableViewDelegate *delegate;
+@property (nonatomic, strong) UIRefreshControl * _Nonnull refreshControl;
+@property (nonatomic, strong) BaseTableViewDataSource * _Nonnull dataSource;
+@property (nonatomic, strong) BaseTableViewDelegate * _Nonnull delegate;
 
 @end
 
@@ -63,7 +63,7 @@ static NSString * const FeedCellId = @"FeedListTableViewCell";
                              }];
 }
 
-- (NSArray *)sectionsFromChannels:(NSArray *)channels {
+- (NSArray * _Nonnull)sectionsFromChannels:(NSArray * _Nonnull)channels {
     NSMutableArray *sections = [NSMutableArray new];
     for (Feed *channel in channels) {
         Section *section = [[Section alloc] initWithItems: channel.feedItems title:channel.title];
@@ -72,7 +72,7 @@ static NSString * const FeedCellId = @"FeedListTableViewCell";
     return sections;
 }
 
-- (void)setupDataSourceWithSections:(NSArray *)sections {
+- (void)setupDataSourceWithSections:(NSArray * _Nonnull)sections {
     TableViewCellConfigureBlock configureCell = ^(FeedListTableViewCell *cell, FeedItem *feed) {
         [cell.image sd_setImageWithURL:[NSURL URLWithString:feed.imageURL]
                       placeholderImage:[UIImage imageNamed:@"placeholder"]];
@@ -104,7 +104,7 @@ static NSString * const FeedCellId = @"FeedListTableViewCell";
                         action:@selector(refresh)
               forControlEvents:UIControlEventValueChanged];
     _refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:RRLocalize(@"kUpdateFeedsTitle")
-                                                                                attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
+                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
     if (@available(iOS 10.0, *)) {
         _tableView.refreshControl = _refreshControl;
         [_tableView setContentOffset:CGPointMake(0, -_tableView.refreshControl.frame.size.height) animated:YES];

@@ -11,8 +11,8 @@
 
 @interface FeedListTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (strong, nonatomic) IBOutlet UIImageView * _Nullable image;
+@property (weak, nonatomic) IBOutlet UILabel * _Nullable titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel * _Nullable detailLabel;
 
 @end

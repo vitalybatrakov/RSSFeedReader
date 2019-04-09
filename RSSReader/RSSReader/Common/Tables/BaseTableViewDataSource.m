@@ -11,8 +11,8 @@
 
 @interface BaseTableViewDataSource ()
 
-@property (nonatomic, strong, readonly) NSArray *sections;
-@property (nonatomic, copy, readonly) NSString *cellIdentifier;
+@property (nonatomic, strong, readonly) NSArray * _Nonnull sections;
+@property (nonatomic, copy, readonly) NSString * _Nonnull cellIdentifier;
 @property (nonatomic, copy, readonly) TableViewCellConfigureBlock configureCellBlock;
 @property (nonatomic, copy, readonly) SectionsChangeBlock changeSectionsBlock;
 
@@ -21,8 +21,8 @@
 @implementation BaseTableViewDataSource
 
 // init data source without reordering
-- (id)initWithItems:(NSArray *)sections
-     cellIdentifier:(NSString *)cellIdentifier
+- (id)initWithItems:(NSArray * _Nonnull)sections
+     cellIdentifier:(NSString * _Nonnull)cellIdentifier
  configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock {
     self = [super init];
     if (self) {
@@ -35,8 +35,8 @@
 }
 
 // init data source with reordering/removing
-- (id)initWithItems:(NSArray *)sections
-     cellIdentifier:(NSString *)cellIdentifier
+- (id)initWithItems:(NSArray * _Nonnull)sections
+     cellIdentifier:(NSString * _Nonnull)cellIdentifier
  configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock
 changeSectionsBlock:(SectionsChangeBlock)changeSectionsBlock {
     self = [self initWithItems:sections
